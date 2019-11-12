@@ -1,0 +1,24 @@
+---
+layout: "base.njk"
+title: "Work"
+tags: "menu"
+---
+
+    <div class="categories">
+      <a href="">Installation</a>
+      <a href="">Mixed Media</a>
+      <a href="">Fiber Art</a>
+    </div>
+    
+    <div class="project-grid">
+
+      {% for project in collections.project %}
+      <div class="project">
+        <a href="{{ project.url }}">
+          <img src="{{ project.data.image }}" />
+          <h3>{{ project.data.title }}</h3>
+        </a>
+      </div>
+      {% endfor %}
+
+    </div>

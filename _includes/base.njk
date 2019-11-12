@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shin-hee Chin | {{ title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/script.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Nanum+Gothic|Nanum+Myeongjo:400,700|Work+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="/"><h1>{{ settings.siteTitle }} <span>강 신희</span></h1></a>
+    </div>
+    <div class="toggle">
+      <button onclick="menuToggle()">Menu</button>
+    </div>
+    <nav id="menu">
+        {% for menu in collections.menu %}
+            <a href="{{ menu.url }}" {% if page.url == menu.url %} class="active"{% endif %}>{{ menu.data.title }}</a>
+        {% endfor %}
+    </nav>
+  </header>
+
+<main>
+   {{ content | safe }}
+  </main>
+
+  <footer>
+    <div class="copyright">
+      <p>{{ settings.copyright }}</p>
+    </div>
+    <div class="social">
+      <a><img src="{{ settings.facebook }}"></a>
+      <a><img src="{{ settings.instagram }}"></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

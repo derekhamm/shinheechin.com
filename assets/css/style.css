@@ -1,0 +1,181 @@
+/* General */
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Type & Color */
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background: #CF482A;
+  color: #222222;
+}
+
+header {
+  background: #EAE8DD;
+}
+
+main {
+  background: #EAE8DD;
+}
+
+footer {
+  color: #EAE8DD;
+}
+
+a {
+  color: #CF482A;
+}
+
+header a, .project a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1.2em;
+}
+
+nav a {
+  
+}
+
+.active {
+  text-decoration-line: underline;
+  text-decoration-thickness: .25em;
+  text-underline-position: under;
+}
+
+.toggle {
+  text-align: right;
+}
+
+.intro {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+}
+
+h1 span {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  margin-left: 1em;
+}
+
+h1 {
+  font-size: 1em;
+  margin-top: 1.2em;
+  color: #222222;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2em;
+}
+
+.categories a {
+  color: #888888;
+  margin-bottom: 1em;
+  text-decoration: none;
+}
+
+.categories a:hover {
+  color: #CF482A;
+}
+
+.image, .project {
+  margin-bottom: 1.2em;
+}
+
+button {
+  margin-top: 1em;
+  background: #CF482A;
+  color: #EAE8DD;
+  border: none;
+  padding: 1em;
+}
+
+.caption {
+  color: #888888;
+}
+
+/* Grid */
+
+header, main, footer {
+  display: grid;
+  grid-template-columns: 
+    minmax(5%, auto) 
+    repeat(6, minmax(2em, 6em))
+    minmax(5%, auto);
+  grid-column-gap: 3%;
+  padding: 1em 0 2em;
+}
+
+.logo {
+  grid-column: 2 / span 5;
+}
+
+.toggle {
+  grid-column: 7 / span 1;
+}
+
+nav, .intro, .info, .categories, .project-grid, .image, .text, .copyright {
+  grid-column: 2 / span 6;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3%;
+}
+
+nav {
+  display: none;
+}
+
+nav.show {
+  display: flex;
+}
+
+/* Large Sizes */
+
+@media screen and (min-width:56em) {
+
+  body {
+
+  }
+
+  .logo {
+    grid-column: 2 / span 3;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    grid-column: 5 / span 3;
+  }
+
+  .info, .categories {
+    grid-column: 2 / span 2;
+  }
+
+  .project-grid, .image, .text {
+    grid-column: 4 / span 4;
+  }
+
+}
