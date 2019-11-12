@@ -7,8 +7,8 @@
   <title>Shin-hee Chin | {{ title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/script.js"></script>
-
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Nanum+Gothic|Nanum+Myeongjo:400,700|Work+Sans:400,700&display=swap" rel="stylesheet">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
@@ -40,6 +40,18 @@
       <a><img src="{{ settings.instagram }}"></a>
     </div>
   </footer>
+
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 
 </body>
 
