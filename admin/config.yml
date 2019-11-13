@@ -6,3 +6,9 @@ publish_mode: editorial_workflow
 
 media_folder: "/assets/images/uploads"
 
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Post" # Used in the UI
+    folder: "/"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
