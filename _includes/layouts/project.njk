@@ -1,0 +1,22 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+<div class="info">
+
+<h2>{{ title }}</h2>
+<p class="caption">{{ year }}</p>
+<p>{{ description }}</p>
+      
+</div>
+<div class="image">
+
+<img src="{{ image }}" />
+<p class="caption">{{ caption }}</p>
+
+{{ content | safe }}
+
+</div>
+
+
+{% endblock content %}

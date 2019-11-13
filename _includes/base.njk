@@ -28,8 +28,10 @@
   </header>
 
 <main>
-   {{ content | safe }}
-  </main>
+{% block content %}
+  {{ content | safe }}
+{% endblock content %}
+</main>
 
   <footer>
     <div class="copyright">
